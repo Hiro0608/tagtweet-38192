@@ -17,17 +17,17 @@ RSpec.describe Comment, type: :model do
       it "コメントが空では投稿できない" do
         @comment.content = ''
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("Content can't be blank")
+        expect(@comment.errors.full_messages).to include("コメントを入力してください")
       end
       it "ユーザーがログインしていなければコメントできない" do
         @comment.user_id = nil
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("User must exist")
+        expect(@comment.errors.full_messages).to include("ユーザーを入力してください")
       end
       it "投稿したものがなければコメントできない" do
         @comment.prototype_id = nil
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("Prototype must exist")
+        expect(@comment.errors.full_messages).to include("投稿を入力してください")
       end
     end
   end

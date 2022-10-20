@@ -1,0 +1,24 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: ネーム
+        profile: プロフィール
+        occupation: 所属
+        position: 役職
+        nickname: ニックネーム
+        password: パスワード
+        first_name: 名前
+        family_name: 苗字
+        first_name_kana: 名前（カナ）
+        family_name_kana: 苗字（カナ）
+        birth_date: 生年月日
+      prototype:
+        title: タイトル
+        image: 画像
+        place: 場所
+        introduction: 投稿内容
+      comment:
+        content: コメント
+        user: ユーザー
+        prototype: 投稿

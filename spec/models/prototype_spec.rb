@@ -14,27 +14,27 @@ RSpec.describe Prototype, type: :model do
       it "写真が添付されていないと登録できない" do
         @prototype.image = nil
         @prototype.valid?
-        expect(@prototype.errors.full_messages).to include("Image can't be blank")
+        expect(@prototype.errors.full_messages).to include("画像を入力してください")
       end
       it "タイトルが入力されていなければ登録できない" do
         @prototype.title = ''
         @prototype.valid?
-        expect(@prototype.errors.full_messages).to include("Title can't be blank")
+        expect(@prototype.errors.full_messages).to include("タイトルを入力してください")
       end
       it "場所が入力されていなければ登録できない" do
         @prototype.catch_copy = ''
         @prototype.valid?
-        expect(@prototype.errors.full_messages).to include("Catch copy can't be blank")
+        expect(@prototype.errors.full_messages).to include("Catch copyを入力してください")
       end
       it "投稿の説明が入力されていなければ登録できない" do
         @prototype.concept = ''
         @prototype.valid?
-        expect(@prototype.errors.full_messages).to include("Concept can't be blank")
+        expect(@prototype.errors.full_messages).to include("Conceptを入力してください")
       end
       it "userが紐付いていない場合は登録できない" do
         @prototype.user = nil
         @prototype.valid?
-        expect(@prototype.errors.full_messages).to include("User must exist")
+        expect(@prototype.errors.full_messages).to include("ユーザーを入力してください")
       end
     end
   end
