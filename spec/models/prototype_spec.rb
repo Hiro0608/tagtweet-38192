@@ -24,12 +24,12 @@ RSpec.describe Prototype, type: :model do
       it "場所が入力されていなければ登録できない" do
         @prototype.place = ''
         @prototype.valid?
-        expect(@prototype.errors.full_messages).to include("Catch copyを入力してください")
+        expect(@prototype.errors.full_messages).to include("場所を入力してください")
       end
       it "投稿の説明が入力されていなければ登録できない" do
         @prototype.tweet = ''
         @prototype.valid?
-        expect(@prototype.errors.full_messages).to include("Tweetを入力してください")
+        expect(@prototype.errors.full_messages).to include("投稿画面を入力してください")
       end
       it "userが紐付いていない場合は登録できない" do
         @prototype.user = nil
