@@ -5,6 +5,6 @@ class Prototype < ApplicationRecord
 
   validates :title, :image, presence: true, length: { maximum: 50 }
   validates :place, presence: true, length: { maximum: 50 }
-  validates :concept, presence: true, length: { maximum: 300 }
+  validates :tweet, presence: true, length: { maximum: 300 }
   validates :image, presence: true
 end

@@ -6,7 +6,7 @@ RSpec.describe Prototype, type: :model do
   end
   describe '新規投稿登録' do
     context '投稿ができる場合' do
-      it "image,title,place,conceptが存在すれば登録できる" do
+      it "image,title,place,tweetが存在すれば登録できる" do
         expect(@prototype).to be_valid
       end
     end  
@@ -27,9 +27,9 @@ RSpec.describe Prototype, type: :model do
         expect(@prototype.errors.full_messages).to include("Catch copyを入力してください")
       end
       it "投稿の説明が入力されていなければ登録できない" do
-        @prototype.concept = ''
+        @prototype.tweet = ''
         @prototype.valid?
-        expect(@prototype.errors.full_messages).to include("Conceptを入力してください")
+        expect(@prototype.errors.full_messages).to include("Tweetを入力してください")
       end
       it "userが紐付いていない場合は登録できない" do
         @prototype.user = nil
