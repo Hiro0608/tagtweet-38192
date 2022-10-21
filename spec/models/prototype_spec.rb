@@ -6,7 +6,7 @@ RSpec.describe Prototype, type: :model do
   end
   describe '新規投稿登録' do
     context '投稿ができる場合' do
-      it "image,title,catch_copy,conceptが存在すれば登録できる" do
+      it "image,title,place,conceptが存在すれば登録できる" do
         expect(@prototype).to be_valid
       end
     end  
@@ -22,7 +22,7 @@ RSpec.describe Prototype, type: :model do
         expect(@prototype.errors.full_messages).to include("タイトルを入力してください")
       end
       it "場所が入力されていなければ登録できない" do
-        @prototype.catch_copy = ''
+        @prototype.place = ''
         @prototype.valid?
         expect(@prototype.errors.full_messages).to include("Catch copyを入力してください")
       end

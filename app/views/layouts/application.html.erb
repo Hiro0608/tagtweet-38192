@@ -15,12 +15,12 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+            <%= link_to "TAG-TRIP", root_path, class: :logo %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to "New Proto", new_prototype_path, class: :nav__btn %>
+              <%= link_to "新規投稿", new_prototype_path, class: :nav__btn %>
             </div>
           <% else %>
             <div class="nav__right">
@@ -33,7 +33,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <p class="copyright">TAG TRIP</p>
     </footer>
   </body>
 </html>
