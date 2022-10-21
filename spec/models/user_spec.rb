@@ -6,7 +6,7 @@ RSpec.describe User, type: :model do
   end
   describe 'ユーザー新規登録' do
     context '新規登録できる場合' do
-      it "email,password,password_confirmation,name,profile,occupation,positionが存在すれば登録できる" do
+      it "email,password,password_confirmation,name,profileが存在すれば登録できる" do
         expect(@user).to be_valid
       end
     end  
@@ -58,22 +58,12 @@ RSpec.describe User, type: :model do
       it 'nameが空では登録できない' do
         @user.name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("ネームを入力してください")
+        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
       end
       it "profileが空では登録できない" do
         @user.profile = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("プロフィールを入力してください")
-      end
-      it "occupationが空では登録できない" do
-        @user.occupation = ''
-        @user.valid?
-        expect(@user.errors.full_messages).to include("所属を入力してください")
-      end
-      it "positionが空では登録できない" do
-        @user.position = '' 
-        @user.valid?
-        expect(@user.errors.full_messages).to include("役職を入力してください")
       end
     end
   end

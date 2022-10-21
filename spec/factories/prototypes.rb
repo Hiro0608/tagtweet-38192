@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :prototype do
     title          { Faker::Lorem.word }
-    catch_copy     { Faker::Lorem.word }
-    concept        { Faker::Lorem.sentence }
+    place     { Faker::Lorem.word }
+    tweet        { Faker::Lorem.sentence }
     
     association :user
     after(:build) do |prototype|
