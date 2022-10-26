@@ -1,8 +1,12 @@
 ## README
 
+## アプリ名
+
+* TAG-TRIP
+
 ## 概要
 
-* オリジナルアプリで作成した画像投稿共有サービスアプリケーションです。（実装中）
+* オリジナルアプリで作成した画像投稿共有サービスアプリケーション。
 
 ## 開発状況
 
@@ -12,18 +16,21 @@
 
 ## 本番環境
 
-* URL https://tagtweet-38192.herokuapp.com/ (実装中)
+* URL https://tagtweet-38192.herokuapp.com/ 
 
 * ID: admin
 * Pass: 2222
 
 * テスト用アカウント
-* <投稿者用>
-* メールアドレス: 
-* パスワード: 
-* <閲覧者用>
-* メールアドレス: 
-* パスワード: 
+* <投稿者用・閲覧者用>
+* メールアドレス: sample@hotmail
+* パスワード: xxJ934qk
+* <投稿者用・閲覧者用>
+* メールアドレス: test@hotmail
+* パスワード: xxJ934qk
+* <投稿者用・閲覧者用>
+* メールアドレス: aaa@hotmail
+* パスワード: xxJ934qk
 
 ## 動作確認方法
 
@@ -39,28 +46,14 @@
 
 * ★確認後、ログアウト処理をお願いします。
 
-## 開発を通じて得られた知見
-
-### 工夫した点
-
-* １）
-* ２）
-
-### 苦労した点
-
-* １）
-* ２）
-
 ## 課題や今後実装したい機能
 
 * ★今後実装したい機能は下記の機能となります。
 
 * いいね機能
-* フォロー機能
 * 通知機能
 * タグ機能
 * 画像複数枚投稿機能
-* SNSログイン機能
 * AWSへデプロイ
 
 
@@ -80,7 +73,6 @@
 * has_many :prototypes
 * has_many :comments
 * has_many :likes
-* has_many :sns_credentials
 
 ## prototypes table
 
@@ -120,16 +112,4 @@
 ### Association
 
 * belongs_to :prototype
-* belongs_to :user
-
-## sns_credentials table
-
-| Column             | Type                | Options                        |
-|--------------------|---------------------|--------------------------------|
-| provider           | string              | null: false                    |
-| uid                | string              | null: false                    |
-| user               | references          | null: false, foreign_key: true |
-
-### Association
-
 * belongs_to :user
