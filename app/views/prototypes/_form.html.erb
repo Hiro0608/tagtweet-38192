@@ -1,4 +1,7 @@
 <%= form_with model: prototype, local: true do |f|%>
+<% @prototype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+<% end %>
   <div class="field">
     <%= f.label :title, "タイトル" %><br />
     <%= f.text_field :title %>
