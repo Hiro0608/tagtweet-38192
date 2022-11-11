@@ -66,3 +66,6 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 # デバッグツール
 gem 'pry-rails'
+group :production do
+  gem 'unicorn', '5.4.1'
+end
