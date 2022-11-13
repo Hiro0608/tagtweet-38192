@@ -50,8 +50,6 @@ test:
 production:
   <<: *default
   database: tagtweet_38192_production
-  username: tagtweet_38192
-  password: <%= ENV['TAGTWEET_38192_DATABASE_PASSWORD'] %>
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
